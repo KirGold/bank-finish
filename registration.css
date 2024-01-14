@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #1f1437;
+    overflow: hidden;
+}
+.load {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #190b37;
+    z-index: 0;
+    top: 0;
+    display: none;
+}
+.load.new{
+    opacity: 1;
+    z-index: 5;
+    display: block;
+}
+.header__but-logo-0 {
+    width: 20%;
+    border-radius: 50%;
+    border: 2px solid #311299;
+    animation: 1s logo-0  linear  alternate  ;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    transition: 3s;
+}
+@keyframes logo-0{
+    0%{
+        transform: scale(0.5);
+        box-shadow:  0 0 20px #cb0e0e;
+    }
+    20%{
+        box-shadow:  0 0 20px #cbaf0e;
+    }
+    40%{
+        box-shadow:  0 0 20px #17cb0e;
+        transform: rotate(190deg);
+    }
+    60%{
+        box-shadow:  0 0 20px #0ebecb;
+    }
+    80%{
+        box-shadow:  0 0 20px #0b0fe8;
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: scale(1);
+        box-shadow:  0 0 20px #f7f7f748;
+    }
+}
+
+.header{
+    background: linear-gradient( #9facee, #adbee4);
+    border-radius: 0 0 30px 30px;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.header__but{
+    width: 30%;
+    margin: 5px auto;
+    position: absolute;
+    left: 220px;
+}
+.header__but-logo{
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #311299;
+    animation: 2s logo ;
+    transition: 0.3s;
+}
+@keyframes logo{
+    0%{
+        transform: scale(0.5);
+        box-shadow:  0 0 20px #cb0e0e;
+    }
+    20%{
+        box-shadow:  0 0 20px #cbaf0e;
+    }
+    40%{
+        box-shadow:  0 0 20px #17cb0e;
+        transform: rotate(190deg);
+    }
+    60%{
+        box-shadow:  0 0 20px #0ebecb;
+    }
+    80%{
+        box-shadow:  0 0 20px #0b0fe8;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow:  0 0 20px #f7f7f748;
+    }
+}
+
+.header__log {
+    width: 120px;
+    height: 6vh;
+    border-radius: 6px;
+    background-color: #2b2b2b;
+    border: 3px solid #51209f;
+    letter-spacing: -2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 220px;
+    top: 15px;
+}
+.header__log-href {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    color: #6606ff;
+}
+/******************                      "MAIN-1"         **********************/
+.registration{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 150px;
+    position: relative;
+    opacity: 0;
+    animation: redistr 2s alternate;
+    transition: 1s;
+    padding: 20px;
+
+}
+@keyframes redistr{
+    0%{
+        transform: translateY(500px);
+    }
+    50%{
+        
+        transform: translateY(-100px);
+        
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.registration.new{
+    opacity: 1;
+}
+.registration-titel{
+    color: azure;
+    font-family: 'Silkscreen', sans-serif;
+    text-shadow: rgb(0, 0, 0) 1px 0 9px;
+    background-color: #3c393956;
+    padding: 3px;
+    border-radius: 20px;
+}
+.registration__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
+    
+}
+
+.registration__username{
+    width: 200px;
+    height: 15%;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(32, 34, 33);
+    border: 1px solid #998eab;
+    color: #f3f2f2f2;
+    box-shadow: inset 0 0 8px #ff06065c;
+}
+
+.registration__email{
+    height: 15%;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(32, 34, 33);
+    border: 1px solid #998eab;
+    color: #f3f2f2f2;
+    box-shadow: inset 0 0 8px #e8f5025c;
+}
+
+.registration__password{
+    height: 15%;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(32, 34, 33);
+    border: 1px solid #998eab;
+    color: #f3f2f2f2;
+    box-shadow: inset 0 0 8px #10ef045c;
+}
+
+.registration__tel{
+    height: 15%;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(32, 34, 33);
+    border: 1px solid #998eab;
+    color: #f3f2f2f2;
+    box-shadow: inset 0 0 8px #e605ea5c;
+}
+
+.registration__button{
+    width: 150px;
+    height: 15%;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(0.25turn, #330870, #350f95, #400dc2);
+    border: 2px solid #606066;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-left: 13%;
+    letter-spacing: -2px;
+    color: #ffffff;
+}
+.registration__button:hover{
+    color: #1a7eb0;
+    background: linear-gradient(0.25turn, #eee6e6, #cbc3c3, #e7dfdf);
+    transform: scale(1.2);
+    font-weight: 600;
+    box-shadow: 0 0 7px #070be2;
+}
+.registration-back-box{
+    position: absolute;
+    left: 33%;
+    top: -10%;
+    z-index: -5;
+}
+.registration-back{
+    width: 520px;
+    height: 64vh;
+    border-radius: 10px;
+}
+
+.registration__cat-1{
+    position: fixed;
+    width: 38%;
+    bottom: 0 ;
+    left: -3%;
+    filter: grayscale(30%);
+    animation: cat 3s;
+    transition: 1s;
+}
+.registration__cat-2{
+    position: fixed;
+    width: 36%;
+    bottom: 0 ;
+    right: 0;
+    filter: grayscale(30%);
+    animation: cat-2 3s;
+    transition: 1s;
+}
+@keyframes cat{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes cat-2{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.modal{
+    border: 2px solid #3c3939;
+    background-color: #d5a82c;
+    box-shadow: inset 0 0 20px #302f2fb0;
+    width: 250px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 14%;
+    left: -500px;
+    transition: 0.3s;
+    border-radius: 0 10px 10px 0;
+    border: 3px solid #000;
+}
+.modal.falseModal{
+    left: 0;
+}
+.modal__img {
+    width: 100px;
+    margin-left: -19px;
+}
+.modal__text{
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+
+.modal-2{
+    border: 2px solid #3c3939;
+    background-color: #d5a82c;
+    box-shadow: inset 0 0 20px #302f2f6a;
+    width: 250px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 33%;
+    transition: 0.3s;
+    border-radius: 0 10px 10px 0;
+    border: 3px solid #000;
+    left: -500px;
+}
+.modal-2.falseModal{
+    left: 0;
+}
+
+.modal-3{
+    border: 2px solid #3c3939;
+    background-color: #d5a82c;
+    box-shadow: inset 0 0 20px #302f2f6a;
+    width: 250px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 43%;
+    transition: 0.3s;
+    border-radius: 0 10px 10px 0;
+    border: 3px solid #000;
+    left: -500px;
+    z-index: 2;
+}
+.modal-3.falseModal{
+    left: 0;
+}
+.modal-4{
+    border: 2px solid #3c3939;
+    background-color: #d5a82c;
+    box-shadow: inset 0 0 20px #302f2f6a;
+    width: 280px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 63%;
+    transition: 0.3s;
+    border-radius: 0 10px 10px 0;
+    border: 3px solid #000;
+    left: -500px;
+    z-index: 2;
+}
+.modal-4.falseModal{
+    left: 0;
+}
+/* Стилі для дуже великих екранів (дисплей 1200рх і більше).
+Записуються без медіа-запитів, тому що контрольна точка не має верхньої межі. */
+
+/* Стилі для великих екранів (дисплей максимум 1199рх) */
+    @media (max-width: 1199px) { 
+        .registration-back-box{
+            left: 27%;
+        }
+    }
+
+/* Стилі для середніх екранів (дисплей максимум 991рх) */
+    @media (max-width: 991px) {
+        .registration__cat-1{
+            display: none;
+        }
+        .registration__cat-2{
+            display: none;
+        }
+        .registration-back-box{
+            left:17%;
+        }
+        .header__log {
+            right: 140px;
+        }
+        .header__but{
+            width: 48%;
+            left: 140px;
+        }
+    }
+
+/* Стилі для малих екранів (дисплей максимум 767рх) */
+    @media (max-width: 767px) {
+        .registration-back-box{
+            display: none;
+        }
+    }
+
+/* Стилі для дуже малих екранів (дисплей максимум 575рх) */
+    @media (max-width: 575px) {
+        .header__but{
+            left: 60px;
+        }
+        .header__log{
+            right: 40px;
+            width: 100px;
+        }
+    }

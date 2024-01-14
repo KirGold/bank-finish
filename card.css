@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #261b2f;
+}
+.load {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #190b37;
+    z-index: 0;
+    top: 0;
+    display: none;
+}
+.load.new{
+    opacity: 1;
+    z-index: 5;
+    display: block;
+}
+.header__but-logo-0 {
+    width: 20%;
+    border-radius: 50%;
+    border: 2px solid #311299;
+    animation: 1s logo-0  linear  alternate  ;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    transition: 3s;
+}
+@keyframes logo-0{
+    0%{
+        transform: scale(0.5);
+        box-shadow:  0 0 20px #cb0e0e;
+    }
+    20%{
+        box-shadow:  0 0 20px #cbaf0e;
+    }
+    40%{
+        box-shadow:  0 0 20px #17cb0e;
+        transform: rotate(190deg);
+    }
+    60%{
+        box-shadow:  0 0 20px #0ebecb;
+    }
+    80%{
+        box-shadow:  0 0 20px #0b0fe8;
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: scale(1);
+        box-shadow:  0 0 20px #f7f7f748;
+    }
+}
+
+
+
+.header{
+    background: linear-gradient( #9facee, #adbee4);
+    border-radius: 0 0 30px 30px;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.header__but{
+    width: 30%;
+    margin: 5px auto;
+    position: absolute;
+    left: 220px;
+}
+.header__but-logo{
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #311299;
+    animation: 2s logo ;
+    transition: 0.3s;
+}
+@keyframes logo{
+    0%{
+        transform: scale(0.5);
+        box-shadow:  0 0 20px #cb0e0e;
+    }
+    20%{
+        box-shadow:  0 0 20px #cbaf0e;
+    }
+    40%{
+        box-shadow:  0 0 20px #17cb0e;
+        transform: rotate(190deg);
+    }
+    60%{
+        box-shadow:  0 0 20px #0ebecb;
+    }
+    80%{
+        box-shadow:  0 0 20px #0b0fe8;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow:  0 0 20px #f7f7f748;
+    }
+}
+.header__log {
+    width: 120px;
+    height: 6vh;
+    border-radius: 6px;
+    background-color: #2b2b2b;
+    border: 3px solid #51209f;
+    letter-spacing: -2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 220px;
+    top: 15px;
+}
+.header__log-href {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    color: #6606ff;
+}
+
+/********************              "MAIN-1"         ***********************/
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 200px 100px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #473754c7;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #6b4f83c7;
+}
+.form-block{
+    padding: 5px;
+}
+.form__label{
+    font-size: 27px;
+    font-family: 'Silkscreen', sans-serif;
+    letter-spacing: -4px;
+    padding: 20px;
+}
+.form-name{
+    background-color: #878ce0;
+    width: 150px;
+    height: 4vh;
+    border-radius: 9px;
+    background-image: url(./img/plaseholder.jpg);
+    background-size: cover;
+    color: aliceblue;
+    font-family: 'Silkscreen', sans-serif;
+}
+.form-name::placeholder{
+    color: rgb(84, 99, 173);
+}
+
+.form-secondName{
+    background-color: #878ce0;
+    width: 170px;
+    height: 4vh;
+    border-radius: 9px;
+    background-image: url(./img/plaseholder.jpg);
+    background-size: cover;
+    color: aliceblue;
+    font-family: 'Silkscreen', sans-serif;
+}
+.form-secondName::placeholder{
+    color: rgb(84, 99, 173);
+}
+
+.form__make{
+    width: 90px;
+    height: 4.9vh;
+    border-radius: 5px;
+    cursor: cell;
+    background: linear-gradient(0.25turn, #083e70, #0f5d95, #0da7c2);
+    color: rgb(202, 175, 175);
+    border: 2px solid #353463;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-left: 70px;
+}
+.form__make:hover{
+    color: #1a7eb0;
+    background: linear-gradient(0.25turn, #eee6e6, #a39797, #e7dfdf);
+    transform: scale(1.1);
+    font-weight: 600;
+}
+
+.form__make-2{
+    width: 90px;
+    height: 4.9vh;
+    border-radius: 5px;
+    cursor: cell;
+    background: linear-gradient(0.25turn, #083e70, #0f5d95, #0da7c2);
+    color: rgb(202, 175, 175);
+    border: 2px solid #353463;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-left: 70px;
+}
+.form__make-2:hover{
+    color: #1a7eb0;
+    background: linear-gradient(0.25turn, #eee6e6, #a39797, #e7dfdf);
+    transform: scale(1.1);
+    font-weight: 600;
+}
+.form__date{
+    background-color: #3d738f;
+    color: aliceblue;
+    width: 150px;
+    height: 3vh;
+}
+
+
+
+
+
+
+
+
+.card{
+    background: linear-gradient(0.25turn, #78a1b2, #ebf8e1, #73abb6);
+    border: 1px solid #878ce0;
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 20px 20px #0c0a11a9;
+    position: relative;
+}
+
+.card__name {
+    color: #261b2f;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 21px;
+    letter-spacing: -4px;
+    margin-left: 20px;
+    position: absolute;
+    bottom: 0;
+}
+.card__secondName {
+    color: #261b2f;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 21px;
+    letter-spacing: -4px;
+    margin-left: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+.card__numbers {
+    position: absolute;
+    top: 30%;
+    margin-left: 50px;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Play', sans-serif;
+    color: #465665;
+}
+.card__cvv {
+    position: absolute;
+    top:60%;
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: 'Play', sans-serif;
+    color: #62788e;
+    font-weight: 700;
+    
+}
+.card__date{
+    position: absolute;
+    top:60%;
+    font-size: 20px;
+    margin-left: 180px;
+    font-family: 'Play', sans-serif;
+    color: #788ea3;
+    font-weight: 700;
+    
+}
+
+
+
+
+
+
+.card__img-1{
+    position: absolute;
+    bottom: 0;
+    width: 33%;
+    right: 0 ;
+    opacity: 0.6;
+    filter: grayscale(0.2);
+}
+.card__img-2{
+    position: absolute;
+    top: 15%;
+    width: 13%;
+    left: 2%;
+    border-radius: 10px;
+    filter: grayscale(0.8);
+    border: 1px solid #000;
+}
+.card__img-3{
+    position: absolute;
+    filter: grayscale(0.5);
+    box-shadow: 0 0 6px #437c7cd4;
+    right: 0;
+    width: 13%;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для дуже великих екранів (дисплей 1200рх і більше).
+Записуються без медіа-запитів, тому що контрольна точка не має верхньої межі. */
+
+/* Стилі для великих екранів (дисплей максимум 1199рх) */
+@media (max-width: 1199px) {
+    .main{
+        flex-direction: column;
+    }
+    .card{
+        margin-top: 100px;
+    }
+}
+
+/* Стилі для середніх екранів (дисплей максимум 991рх) */
+    @media (max-width: 991px) {
+        .header__but{
+            width: 48%;
+            left: 140px;
+        }
+        .header__log {
+            right: 140px;
+        }
+    }
+
+/* Стилі для малих екранів (дисплей максимум 767рх) */
+    @media (max-width: 767px) {
+    .card{
+        width: 400px;
+        height: 200px;
+    }
+    .form__label{
+        font-size: 20px;
+        padding: 5px;
+        letter-spacing: -2px;
+    }
+    }
+
+/* Стилі для дуже малих екранів (дисплей максимум 575рх) */
+    @media (max-width: 575px) {
+        .header__log{
+            right: 40px;
+            width: 100px;
+        }
+        .header__but{
+            left: 60px;
+        }
+        .form__label{
+            font-size: 16px;
+            padding: 2px;
+            letter-spacing: -2px;
+        }
+        .form__make{
+            margin-left: 30px;
+        }
+        .form__make-2{
+            margin-left: 30px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .card{
+            width: 270px;
+            height: 170px;
+        }
+        .card__name{
+            font-size: 15px;
+            letter-spacing: -2px;
+        }
+        .card__secondName{
+            font-size: 15px;
+            letter-spacing: -2px;
+        }
+        .card__numbers{
+            font-size: 20px;
+            padding: 2px;
+        }
+        .card__cvv{
+            font-size: 13px;
+        }
+        .card__date{
+            font-size: 13px;
+            right: 100px;
+        }
+    }
